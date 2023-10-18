@@ -125,7 +125,9 @@
         {{~raw "topic-post-badges" unreadPosts=topic.unread_posts unseen=topic.unseen url=topic.lastUnreadUrl newDotText=newDotText}}
       {{~/if}}
     </span>
-    <span>{{topic.creator}}</span>
+    <UserLink @user={{topic.creator}}>
+      {{topic.creator.username}}
+    </UserLink>
     <div class="link-bottom-line">
       {{#unless hideCategory}}
         {{#unless topic.isPinnedUncategorized}}
@@ -217,7 +219,9 @@
         {{~raw "topic-post-badges" unreadPosts=topic.unread_posts unseen=topic.unseen url=topic.lastUnreadUrl newDotText=newDotText}}
       {{~/if}}
     </span>
-    <span>{{topic.creator}}</span>
+    <UserLink @user={{topic.creator}}>
+      {{topic.creator.username}}
+    </UserLink>
     <div class="link-bottom-line">
       {{#unless hideCategory}}
         {{#unless topic.isPinnedUncategorized}}
