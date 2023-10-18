@@ -41,7 +41,9 @@
       {{~/if}}
     </span>
 
-    <span>{{topic.creator}}</span>
+    <a href="{{topic.creator.path}}" data-user-card="{{topic.creator.username}}">
+      {{topic.creator.username}}
+    </a>
 
     <div class="link-bottom-line">
       {{#unless hideCategory}}
@@ -125,9 +127,9 @@
         {{~raw "topic-post-badges" unreadPosts=topic.unread_posts unseen=topic.unseen url=topic.lastUnreadUrl newDotText=newDotText}}
       {{~/if}}
     </span>
-    <UserLink @user={{topic.creator}}>
+    <a href="{{topic.creator.path}}" data-user-card="{{topic.creator.username}}">
       {{topic.creator.username}}
-    </UserLink>
+    </a>
     <div class="link-bottom-line">
       {{#unless hideCategory}}
         {{#unless topic.isPinnedUncategorized}}
@@ -219,9 +221,9 @@
         {{~raw "topic-post-badges" unreadPosts=topic.unread_posts unseen=topic.unseen url=topic.lastUnreadUrl newDotText=newDotText}}
       {{~/if}}
     </span>
-    <UserLink @user={{topic.creator}}>
+    <a href="{{topic.creator.path}}" data-user-card="{{topic.creator.username}}">
       {{topic.creator.username}}
-    </UserLink>
+    </a>
     <div class="link-bottom-line">
       {{#unless hideCategory}}
         {{#unless topic.isPinnedUncategorized}}
